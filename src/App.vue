@@ -29,6 +29,11 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+.footer{
+  padding: 1.5rem 1.5rem 0rem  !important;
+  
+  
+}
 
 
 </style>

@@ -35,18 +35,16 @@
       </template>
     </b-carousel>
     <div class="container">
-      <div class="notification is-primary">
+      <!-- <nav class="breadcrumb is-centered mt-5"  aria-label="breadcrumbs">
         <ul>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#">Bulma</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Components</a></li>
+          <li class="is-active">
+            <a href="#" aria-current="page">Breadcrumb</a>
+          </li>
         </ul>
-        <ul>
-          <li><a href="#">Blog Post</a></li>
-        </ul>
-        <ul>
-          <li><a href="#">Video Player</a></li>
-        </ul>
-
-      </div>
+      </nav> -->
     </div>
     <div class="container">
       <div class="columns box mt-5">
@@ -74,7 +72,8 @@
             in any irrigation system, requires the injection of soluble
             fertilizer solutions into the irrigation water by a dosing
             devices-injectors. High quality, fully water soluble fertilizers are
-            required for the preparation of an appropriate nutrient solutions[...].
+            required for the preparation of an appropriate nutrient
+            solutions[...].
           </h6>
         </div>
       </div>
@@ -169,10 +168,11 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img
+                <video id="v1" width="450" controls src="http://techslides.com/demos/sample-videos/small.mp4"></video>
+                <!-- <img
                   src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=968&q=80"
                   alt="Placeholder image"
-                />
+                /> -->
               </figure>
             </div>
           </div>
@@ -187,7 +187,8 @@
             nutrients combining the Multi-K™ potassium nitrate benefits plus
             essential macro and micro nutrients. Haifa Turbo-K™ complex
             fertilizer is ideal for open field, greenhouses, orchards and turf
-            production. Geared fertilizer technology to maximize crop revenue.[...]
+            production. Geared fertilizer technology to maximize crop
+            revenue.[...]
           </h6>
         </div>
       </div>
@@ -220,16 +221,16 @@
           </h6>
         </div>
       </div>
-      <div class="columns box mt-5">
+      <div class="columns box mt-5" v-on:click="fun" >
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img
-                  src="https://images.outlookindia.com/public/uploads/articles/2020/5/28/Picture_(3).jpg"
-                  alt="Placeholder image"
-                />
+                
+               <img src="https://images.outlookindia.com/public/uploads/articles/2020/5/28/Picture_(3).jpg"
+                alt="Placeholder image" />
               </figure>
+              
             </div>
           </div>
         </div>
@@ -249,17 +250,22 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+      <Footer msg="Welcome to Footer" />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
     HelloWorld,
+    Footer,
   },
   data() {
     return {
@@ -281,11 +287,11 @@ export default {
       items: [
         {
           title: "Slide 1",
-          image: "https://picsum.photos/id/0/1230/500",
+          image: "https://www.bahrainedb.com/app/uploads/2020/08/MattWardle_EDB_Library_Instagram_640px-7156.jpg",
         },
         {
           title: "Slide 2",
-          image: "https://picsum.photos/id/1/1230/500",
+          image: "https://egovspace.co.in/wp-content/uploads/2019/01/TaaS.jpg",
         },
         {
           title: "Slide 3",
@@ -323,6 +329,28 @@ export default {
         document.documentElement.classList.remove("is-clipped");
       }
     },
+     fun: function () {
+       document.getElementById("v1");
+      // `this` inside methods points to the Vue instance
+      // alert('Hello ' + this.name + '!')
+      // // `event` is the native DOM event
+      // if (event) {
+      //   alert(event.target.tagName)
+      // }
+    }
   },
+
 };
+
+// new Vue({
+//   el:"#app",
+//   data:{
+//     video: "https://www.w3schools.com/tags/movie.mp4"
+//   },
+//   methods:{
+//     changeVideo(){
+//       this.video = "http://techslides.com/demos/sample-videos/small.mp4"
+//     }
+//   }
+// })
 </script>

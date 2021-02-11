@@ -8,12 +8,21 @@
       </template>
       <template #start>
         <b-navbar-item href="#">
-          <router-link to="/">Home</router-link> |
+          <router-link to="/">HOME</router-link>
         </b-navbar-item>
         <b-navbar-item href="#">
-          Documentation
+         <router-link to="/">SERVICES</router-link>
         </b-navbar-item>
-        <b-navbar-dropdown label="Info">
+        <b-navbar-item href="#">
+         <router-link to="/">WHAT WE DO</router-link>
+        </b-navbar-item>
+        <b-navbar-item href="#">
+         <router-link to="/">OUR PRODUCTS</router-link>
+        </b-navbar-item>
+        <b-navbar-item href="#">
+         <router-link to="/">CARRIER</router-link>
+        </b-navbar-item>
+        <b-navbar-dropdown label="INFO">
           <b-navbar-item href="#">
             <router-link to="/about">About</router-link>
           </b-navbar-item>
