@@ -1,5 +1,8 @@
 <template>
     <section>
+        <div class="cl">
+            <HelloWorld msg="Welcome to Your Vue.js App" />
+          </div> 
         <!-- <b-button
             label="Launch component modal"
             type="is-primary"
@@ -250,13 +253,21 @@
         </form-wizard>
  </div>
 </div> -->
+<footer style="margin-top: 30px;">
+    <Footer msg="Welcome to Footer" />
+</footer>
     </section>
 </template>
 
 <script lang="js">
-
+import HelloWorld from "@/components/HelloWorld.vue";
+import Footer from "@/components/Footer.vue";
     export default  {
       name: 'mechanical',
+      components: {
+    HelloWorld,
+    Footer
+  },
       props: [],
       mounted () {
   

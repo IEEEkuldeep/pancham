@@ -67,13 +67,11 @@
             </a>
             
             <a class="button  is-light">
-              <i class="fas fa-user-plus"></i>&nbsp;
-              <strong>Sign up</strong>
+               <router-link to="/signup"> <i class="fas  fa-user-plus"></i>&nbsp; <strong>Sign-up&#47;Signin</strong></router-link>
+              
+             
             </a>
-            <a class="button is-light">&nbsp;
-              <i class="fas fa-user-plus"></i>
-              Log in
-            </a>
+           
           </div>
         </b-navbar-item>
       </template>
