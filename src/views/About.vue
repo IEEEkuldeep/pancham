@@ -18,7 +18,8 @@
         </b-modal> -->
 
 
-        
+        <div class="container" style="margin-top: 200px;">
+
 
             <b-steps type="is-danger">
                 <b-step-item  label="Account" icon="user-circle" icon-pack="far">
@@ -230,6 +231,7 @@
                      
                 </b-step-item>
             </b-steps>
+        </div>
         
 
 
