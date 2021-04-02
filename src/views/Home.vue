@@ -3,36 +3,22 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <b-carousel
-      :autoplay="false"
+      :autoplay="100"
       with-carousel-list
       :indicator="false"
       :overlay="gallery"
-      @click="switchGallery(true)"
+      @click="switchGallery(false)"
     >
       <b-carousel-item v-for="(item, i) in items" :key="i">
         <figure class="image">
           <img :src="item.image" />
         </figure>
       </b-carousel-item>
-      <span
+      <!-- <span
         v-if="gallery"
         @click="switchGallery(false)"
         class="modal-close is-large"
-      />
-      <template #list="props">
-        <b-carousel-list
-          v-model="props.active"
-          :data="items"
-          v-bind="al"
-          @switch="props.switch($event, false)"
-          as-indicator
-        />
-      </template>
-      <template #overlay>
-        <div class="has-text-centered has-text-white">
-          Hello i'am overlay!
-        </div>
-      </template>
+      /> -->
     </b-carousel>
     <div class="container">
       <!-- <nav class="breadcrumb is-centered mt-5"  aria-label="breadcrumbs">
@@ -48,33 +34,48 @@
     </div>
     <div class="container">
       <div class="columns box mt-5">
+        <div class="column">
+          <h2 class="subtitle is-2">
+            Calibration
+          </h2>
+          <div class="content is-large has-text-center">
+            Pancham calibration is the group of pancham industries leader
+            providing comprehensive calibration service solutions since 2021
+            Pancham calibration services a broad range of applications and
+            industry sectors globally with instrument calibration, repair,
+            validation, and other services.
+          </div>
+        </div>
+      </div>
+      <div class="columns box mt-5">
+        <div class="column">
+          <h2 class="subtitle is-2">
+            Laboratory Calibration
+          </h2>
+
+          <h6 class="subtitle is-6">
+            <div class="content is-medium has-text-left">
+              Pancham calibration providing reliable localized support.
+              Environmentally controlled facilities to ensure high quality and
+              accurate calibrations and measurements support. Certified
+              metrologists staffing laboratories in North INDIA,Middle East
+              globally providing reliable localized support Expedited
+              calibration services available Pickup and delivery services
+              available
+            </div>
+          </h6>
+        </div>
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
                 <img
-                  src="https://specials-images.forbesimg.com/imageserve/5ea0bf898c2caa0006e718e2/960x0.jpg?fit=scale"
+                  src="../assets/instrument-calibration-services.jpg"
                   alt="Placeholder image"
                 />
               </figure>
             </div>
           </div>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-2">
-            Haifa's nutritional solutions combine quality fertilizers and highly
-            efficient application methods.
-          </h2>
-          <h6 class="subtitle is-6">
-            The daily application rate of nutrients through Nutrigation is
-            changing during the growing season and is planned to follow plant
-            daily demand according to its nutrients uptake pattern. Nutrigation,
-            in any irrigation system, requires the injection of soluble
-            fertilizer solutions into the irrigation water by a dosing
-            devices-injectors. High quality, fully water soluble fertilizers are
-            required for the preparation of an appropriate nutrient
-            solutions[...].
-          </h6>
         </div>
       </div>
       <div class="columns box mt-5">
@@ -83,7 +84,7 @@
             <div class="card-image">
               <figure class="image is-4by3">
                 <img
-                  src="https://www.foodbusinessnews.net/ext/resources/2019/9/TractorFarm_Lead.jpg?t=1569426080&width=1080"
+                  src="../assets/single-source-calibration-solutions-management.jpg"
                   alt="Placeholder image"
                 />
               </figure>
@@ -91,165 +92,528 @@
           </div>
         </div>
         <div class="column">
-          <h2 class="subtitle is-2">
-            Nutrigation™ - The optimal match between nutrition and growth
-            requirements
-          </h2>
+          <h2 class="subtitle is-2">Single Source Calibration Solutions</h2>
           <h6 class="subtitle is-6">
-            The application of nutrients through irrigation systems is referred
-            to as Nutrigation™ or Fertigation. The incorporation of soluble
-            fertilizers into the irrigation water is facilitated the integration
-            and harmonization between the application of water and plant
-            nutrients. Using Nutrigation™, an adequate supply of nutrients and
-            water can be directed towards the plant root zone to satisfy plant
-            demands during the various growth stages[...].
+            <div class="content is-medium has-text-left">
+              Pancham calibration can manage all of your calibration needs. In
+              the instances where we do not have internal capability, let us
+              manage your calibration needs and be your Single Source
+              Calibration Solutions provider. We have team of specialists
+              working directly with OEMs and other specialty providers to meet
+              your needs. Benefits include: Working with one provider, not many
+              Let Pancham calibration research and source the appropriate
+              provider for your specialized needs Minimize administration costs
+              while allowing Pancham calibration to vett and maintain external
+              vendors, less vendors to maintain Calibration results and
+              documentation are reviewed and approved by Pancham calibration
+              before releasing to customer
+            </div>
           </h6>
         </div>
       </div>
       <div class="columns box mt-5">
+        <div class="column">
+          <h2 class="subtitle is-2">
+            Embedded Calibration Solutions
+          </h2>
+          <h6 class="subtitle is-6">
+            <div class="content is-medium has-text-left">
+              <b
+                >For those customer’s who’s needs are not met by our laboratory
+                or onsite services, embedded solutions may be the right move.</b
+              >
+              By embedding our staff into your facility you gain a world of
+              benefits. Solution customized to meet your needs Flexibility, can
+              be modified as your needs change Embedded personnel are pancham
+              group of employees and have access and support of the Global
+              Pancham calibration team. Metrology expertise, quality and
+              technical resources, operational support, customer service, etc.
+              Embedded solutions reduce logistical costs, reduce risk of damage
+              during transit to provider, reduce downtime, increase equipment
+              utilization.
+            </div>
+          </h6>
+        </div>
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
                 <img
-                  src="https://img.etimg.com/thumb/msid-76014718,width-300,imgsize-645630,,resizemode-4,quality-100/19.jpg"
+                  src="../assets/embedded-calibration-solutions.jpg"
                   alt="Placeholder image"
                 />
               </figure>
             </div>
           </div>
         </div>
+      </div>
+      <div class="columns box mt-5">
         <div class="column">
-          <h2 class="subtitle is-2">CRF Application</h2>
-          <h6 class="subtitle is-6">
-            A single pre-planting application of controlled release fertilizer
-            (CRF) can fill a crop’s nutritional requirements throughout its
-            growth season. CRF products are designed to feed plants
-            continuously, at maximum nutrient uptake efficiency. controlled
-            release fertilizers save labor and application costs, enable
-            application independent of the irrigation system, and require no
-            sophisticated equipment.[...]
-          </h6>
+          <div class="">
+            <div class="card-image">
+              <div class="column">
+                <h2 class="subtitle is-4">
+                  Calibration Service Levels
+                </h2>
+                <h6 class="subtitle is-6">
+                  <div class="content is-medium has-text-center">
+                    To meet the quality and technical requirements of your
+                    company and industry standards, Pancham calibration offers
+                    multiple calibration service levels.
+                  </div>
+                </h6>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="columns box mt-5">
-        <div class="column is-one-third">
-          <div class="card">
+        <div class="column">
+          <table class="table">
+            <thead>
+              <tr class="has-text-left">
+                <th>Type of Service</th>
+                <th>Traceable</th>
+                <th>Traceable with Data</th>
+                <th>Accredited(ISO:IEC:17025:2017,Z540.3)</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="has-text-left">
+                <th>
+                  Calibrated to manufacturers specifications traceable to SI
+                  Units
+                </th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>ISO 9000 Compliant</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>
+                  Logo from Accreditation body, Expanded Measurement Uncertainty
+                </th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>
+                  Calibration certificates, data, maintained on secure web based
+                  tool (CDM)
+                </th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>
+                  Detailed calibration certificates and calibration stickers
+                </th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>Instrument adjustment (if found out of tolerance)</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>ANSI/NCSL Z540-1 compliant</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>Calibration Data</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>IATF:16949:2016</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>ISO:9001:2015</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+              <tr class="has-text-left">
+                <th>ISO:14001</th>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="columns box mt-5">
+        <div class="column">
+          <div class="">
             <div class="card-image">
-              <figure class="image is-4by3">
+              <div class="column">
+                <h2 class="subtitle is-4">
+                  Search Our Equipment Database
+                </h2>
+                <h6 class="subtitle is-6">
+                  <div class="content is-medium">
+                    We support calibration, repair, global solutions, and
+                    equipment leasing & sales for a variety of equipment types,
+                    manufacturers and industries. Inquire on specific equipment
+                    or if the model number you are after is not available,
+                    please contact us and we guide you through servicing your
+                    specific needs.
+                  </div>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column"></div>
+      <div class="columns box mt-5" v-on:click="fun">
+        <div class="column">
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest ">
                 <img
-                  src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1052&q=80"
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/Validation-black.png"
                   alt="Placeholder image"
                 />
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Validation
+                </h6>
               </figure>
             </div>
           </div>
         </div>
         <div class="column">
-          <h2 class="subtitle is-2">
-            HaifaStim™ Nutritional supplements for healthy crops
-          </h2>
-          <h6 class="subtitle is-6">
-            Support high yielding crops: HaifaStim™ products help the plant to
-            produce the metabolites and enzymes required to produce maximum
-            yield. Counteract stresses: HaifaStim™ products help the plant to
-            recover its metabolism, and reactivate biochemical processes and
-            enzyme synthesize necessary for growth. Maintain all crops in
-            optimal condition: HaifaStim™ products nourish the plant with
-            physio-nutritional compounds that help to carry on its productive
-            cycle and to avoid stresses. As carriers for weed-killers and
-            fungicides: HaifaStim™ products facilitate the activity of the
-            agrochemicals and accelerate their transfer in the plan.[...]
-          </h6>
-        </div>
-      </div>
-      <div class="columns box mt-5">
-        <div class="column is-one-third">
-          <div class="card">
+          <div class="card1">
             <div class="card-image">
-              <figure class="image is-4by3">
-                <video id="v1" width="450" controls src="http://techslides.com/demos/sample-videos/small.mp4"></video>
-                <!-- <img
-                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=968&q=80"
-                  alt="Placeholder image"
-                /> -->
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-2">
-            Haifa Turbo-K™ - Granular NPK Complex Fertilizer based on Potassium
-            Nitrate
-          </h2>
-          <h6 class="subtitle is-6">
-            In one uniform granule, your plant is provided with highly valuable
-            nutrients combining the Multi-K™ potassium nitrate benefits plus
-            essential macro and micro nutrients. Haifa Turbo-K™ complex
-            fertilizer is ideal for open field, greenhouses, orchards and turf
-            production. Geared fertilizer technology to maximize crop
-            revenue.[...]
-          </h6>
-        </div>
-      </div>
-      <div class="columns box mt-5">
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
+              <figure class="imagetest">
                 <img
-                  src="https://spontaneousorder.in/wp-content/uploads/2020/02/Swatantra.jpg"
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/Calibration-black.png"
                   alt="Placeholder image"
                 />
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Calibration
+                </h6>
               </figure>
             </div>
           </div>
         </div>
         <div class="column">
-          <h2 class="subtitle is-2">
-            Multi-K™ potassium nitrate fertilizers
-          </h2>
-          <h6 class="subtitle is-6">
-            Multi-K™, Haifa’s flagship potassium nitrate brand, is the basis of
-            a whole line of plain and enriched potassium nitrate products,
-            designed for optimal plant nutrition. Potassium nitrate is a high
-            quality source of both potassium and nitrogen, two essential
-            macronutrients (primary nutrients) for plants. Since a healthy
-            growth requires large amounts of nitrogen and potassium, these
-            elements have to be applied to the soil regulary. That's where Haifa
-            Multi-K™ potassium nitrate based fertilizers enter the picture.[...]
-          </h6>
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/temp.-RH.png"
+                  alt="Placeholder image"
+                />
+
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Temperature and RH Mapping
+                </h6>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="columns box mt-5" v-on:click="fun" >
-        <div class="column is-one-third">
-          <div class="card">
+      <div class="columns box mt-5" v-on:click="fun">
+        <div class="column">
+          <div class="card1">
             <div class="card-image">
-              <figure class="image is-4by3">
-                
-               <img src="https://images.outlookindia.com/public/uploads/articles/2020/5/28/Picture_(3).jpg"
-                alt="Placeholder image" />
+              <figure class="imagetest ">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/HVAC-black.png"
+                  alt="Placeholder image"
+                />
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  HVAC and Clean Room Validation
+                </h6>
               </figure>
-              
             </div>
           </div>
         </div>
         <div class="column">
-          <h2 class="subtitle is-2">
-            The most common soil application method used mainly for open field
-            crops is fertilizer broadcast.
-          </h2>
-          <h6 class="subtitle is-6">
-            It is a method by which the fertilizers are applied on the surface
-            across an entire field. Often high capacity spreaders are used to
-            spin dry fertilizer on the soil surface. Broadcast fertilization can
-            be improved by incorporating fertilizer through plowing or disking.
-            The advantages of the soil application methods are that they are
-            relatively fast and economical.[...]
-          </h6>
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/SQT-black.png"
+                  alt="Placeholder image"
+                />
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  ISO 9001 Validation
+                </h6>
+              </figure>
+            </div>
+          </div>
         </div>
+        <div class="column">
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/cav-1.png"
+                  alt="Placeholder image"
+                />
+
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Process Validation
+                </h6>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns box mt-5" v-on:click="fun">
+        <div class="column">
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest ">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/cav-1.png"
+                  alt="Placeholder image"
+                />
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Pressure Guage Validation
+                </h6>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2018/03/HVAC-black.png"
+                  alt="Placeholder image"
+                />
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Thermal Calibration & Testing
+                </h6>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card1">
+            <div class="card-image">
+              <figure class="imagetest">
+                <img
+                  src="https://oorjatechnical.in/wp-content/uploads/2019/11/17169166.jpg"
+                  alt="Placeholder image"
+                />
+
+                <h6 class="subtitle is-4 mt-4 pt-4 pb-4">
+                  Electrical Calibration & Testing
+                </h6>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+          <h2 class="subtitle is-4">
+            Meet Our Customer’s
+          </h2>
+        </div>
+      <div class="columns mt-4 mb-3">
+        
+        <swiper
+          class="swiper"
+          :options="swiperOption"
+          
+        >
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/BharatBenz.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/bridgestone.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/Eicher-logo.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/force.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/hmmotor.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/hyunadai.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/jeep.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/peguot.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/mahindra.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/man.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/Premier.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/SK STEEL.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/suzuki.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div class="box">
+              <div class="level-item has-text-centered">
+                <div>
+                  <img
+                    src="../assets/clientlogo/tata.png"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+        </swiper>
       </div>
     </div>
+
     <div class="footer">
       <Footer msg="Welcome to Footer" />
     </div>
@@ -269,25 +633,48 @@ export default {
   },
   data() {
     return {
+      swiperOption: {
+        
+        slidesPerView: 3,
+        spaceBetween: 30,
+        
+        loop: true,
+        autoplay: {
+                        delay: 2000,
+                        // disableOnInteraction: true
+                    },
+        speed: 1000,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      },
       gallery: false,
+      arrow: true,
+      // pauseHover: false,
+      // pauseInfo: false,
+      interval: 100,
+      // "indicator-spaced"	:"5.5rem",
+      "indicator-style": "is-dots",
       al: {
         hasGrayscale: true,
         itemsToShow: 2,
         breakpoints: {
           768: {
             hasGrayscale: false,
-            itemsToShow: 4,
+            itemsToShow: 3,
           },
           960: {
             hasGrayscale: true,
-            itemsToShow: 6,
+            itemsToShow: 3,
           },
         },
       },
       items: [
         {
           title: "Slide 1",
-          image: "https://www.bahrainedb.com/app/uploads/2020/08/MattWardle_EDB_Library_Instagram_640px-7156.jpg",
+          image: require("@/assets/webslider/mod002.jpg"),
         },
         {
           title: "Slide 2",
@@ -295,29 +682,30 @@ export default {
         },
         {
           title: "Slide 3",
-          image: "https://picsum.photos/id/2/1230/500",
+          image: "https://www.bahrainedb.com/app/uploads/2020/08/MattWardle_EDB_Library_Instagram_640px-7156.jpg",
         },
         {
           title: "Slide 4",
-          image: "https://picsum.photos/id/3/1230/500",
+          image:require("@/assets/webslider/mod003.jpg"),
         },
         {
           title: "Slide 5",
-          image: "https://picsum.photos/id/4/1230/500",
+          image: require("@/assets/webslider/mod1.jpg"),
         },
         {
           title: "Slide 6",
-          image: "https://picsum.photos/id/5/1230/500",
+          image: require("@/assets/webslider/mod0.jpg"),
         },
         {
           title: "Slide 7",
-          image: "https://picsum.photos/id/6/1230/500",
+          image: require("@/assets/webslider/mod005.jpg"),
         },
         {
           title: "Slide 8",
           image: "https://picsum.photos/id/7/1230/500",
         },
       ],
+      
     };
   },
   methods: {
@@ -329,17 +717,34 @@ export default {
         document.documentElement.classList.remove("is-clipped");
       }
     },
-     fun: function () {
-       document.getElementById("v1");
+    switchGalleryTest(value) {
+      this.gallerypic = value;
+      if (value) {
+        document.documentElement.classList.add("is-clipped");
+      } else {
+        document.documentElement.classList.remove("is-clipped");
+      }
+    },
+    // pauseTimer() {
+    //   this.isPause = true;
+    //   if (this.timer) {
+    //     clearInterval(this.timer);
+    //     this.timer = null;
+    //   }
+    // },
+    fun: function() {
+      document.getElementById("v1");
       // `this` inside methods points to the Vue instance
       // alert('Hello ' + this.name + '!')
       // // `event` is the native DOM event
       // if (event) {
       //   alert(event.target.tagName)
       // }
-    }
+    },
   },
-
+  mounted(){
+  this.swiper.slideTo(3, 100, false);
+}
 };
 
 // new Vue({
@@ -353,4 +758,77 @@ export default {
 //     }
 //   }
 // })
+
+
 </script>
+
+<style scoped>
+.fa-check.fa-w-16 {
+  color: green;
+}
+/* img {
+    height: 4.5rem;
+} */
+.imagetest img {
+  height: 6.5rem;
+  object-fit: cover;
+}
+.card1 {
+  border: 2px groove;
+  border-radius: 10px;
+  border-color: darkred;
+}
+h6.subtitle.is-4.pt-4.pb-4 {
+  background-color: darkred;
+  color: whitesmoke;
+}
+@media only screen and (max-width: 1500px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 200px;
+    margin-left: 150px;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+  }
+  td:nth-of-type(1):before {
+    content: "Option";
+  }
+  td:nth-of-type(2):before {
+    content: "Description";
+  }
+  td:nth-of-type(3):before {
+    content: "Type";
+  }
+  td:nth-of-type(4):before {
+    content: "Default";
+  }
+}
+table {
+  overflow-x: auto;     
+}
+</style>

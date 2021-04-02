@@ -13,11 +13,17 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
     "buefy": "^0.9.4",
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
+    "jquery": "^3.6.0",
     "shaka-player": "^2.5.20",
-    "vue": "^2.6.11",
+    "swiper": "^5.4.5",
+    "vue": "^2.6.12",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-form-wizard": "^0.8.4",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {

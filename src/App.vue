@@ -29,11 +29,12 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-.footer{
-  padding: 1.5rem 1.5rem 0rem  !important;
-  
-  
+
+.footer {
+  padding: 1.5rem 0rem 0rem 0rem !important;
 }
-
-
+.carousel-item {
+  object-fit: cover !important;
+  height: 600px !important;
+}
 </style>
