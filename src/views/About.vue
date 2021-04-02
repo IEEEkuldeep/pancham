@@ -21,7 +21,7 @@
         <div class="container" style="margin-top: 200px;">
 
 
-            <b-steps type="is-danger">
+            <b-steps type="is-danger" style="margin-bottom:300px;">
                 <b-step-item  label="Account" icon="user-circle" icon-pack="far">
                    <div class="container">
                     <div class="field">
